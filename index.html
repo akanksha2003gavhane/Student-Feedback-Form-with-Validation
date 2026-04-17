@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Student Feedback Form</title> 
+    <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+    <div class="container"> 
+        <form id="feedbackForm">
+
+            <h1>Student Feedback Form</h1>  
+
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter Student Name" name="name" id="name" class="name" required>
+            <span id="nameError" class="error"></span> 
+
+            <label for="email">Email</label>
+            <input type="email" placeholder="Enter Your Email" name="email" id="email" class="email" required> 
+            <span id="emailError" class="error"></span>
+
+            <label for="rate">Rate Us</label>
+            <select id="rate" name="rate" required> 
+                <option value="">Select Rating</option> <option value="Excellent">Excellent</option> 
+                <option value="Good">Good</option> <option value="Average">Average</option> 
+                <option value="Poor">Poor</option> <option value="Very Poor">Very Poor</option> 
+            </select> 
+            <span id="rateError" class="error"></span>
+
+            <label for="feedback">Feedback</label>
+            <textarea name="feedback" id="feedback" placeholder="Enter Your Feedback" required></textarea>
+            <span id="feedbackError" class="error"></span>  
+
+            <button type="submit">Submit Feedback</button> 
+
+        </form>  
+
+
+        <div class="container-feedback"> 
+
+            <h2>Submitted Feedback</h2>
+
+            <table> 
+
+                <thead> 
+                    <tr> 
+                        <th>No.</th>
+                        <th>Name</th> 
+                        <th>Email</th> 
+                        <th>Rating</th> 
+                        <th>Feedback</th> 
+                    </tr> 
+                </thead> 
+
+                <tbody id="data"></tbody> 
+
+            </table> 
+        </div> 
+    </div>
+    
+    <script src="script.js"></script>
+
+</body> 
+</html>
